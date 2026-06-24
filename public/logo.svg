@@ -1,0 +1,40 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Cloud/Tech Hexagon Mesh -->
+  <path
+    d="M50 5L90 28V72L50 95L10 72V28L50 5Z"
+    stroke="#4f86f7"
+    stroke-width="4"
+    stroke-linejoin="round"
+    opacity="0.4"
+  />
+  <!-- Inner AI Nodes Connecting -->
+  <circle cx="50" cy="28" r="7" fill="url(#cyanGlow)" />
+  <circle cx="28" cy="62" r="7" fill="url(#violetGlow)" />
+  <circle cx="72" cy="62" r="7" fill="url(#blueGlow)" />
+  
+  <!-- Connective Paths -->
+  <line x1="50" y1="28" x2="28" y2="62" stroke="#00f5ff" stroke-width="3" />
+  <line x1="50" y1="28" x2="72" y2="62" stroke="#4f86f7" stroke-width="3" />
+  <line x1="28" y1="62" x2="72" y2="62" stroke="#a855f7" stroke-width="3" />
+
+  <!-- Core Star/Success Burst in Center -->
+  <path
+    d="M50 42L53 48L59 50L53 52L50 58L47 52L41 50L47 48L50 42Z"
+    fill="#ffffff"
+  />
+
+  <defs>
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#00f5ff" />
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#4f86f7" />
+    </radialGradient>
+  </defs>
+</svg>

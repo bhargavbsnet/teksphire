@@ -1,0 +1,46 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model ContactSubmission {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  company     String?
+  inquiryType String   // e.g. "Cloud Solutions", "AI Integration", "Careers", "Other"
+  message     String
+  createdAt   DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  status    String   @default("active") // "active", "unsubscribed"
+  createdAt DateTime @default(now())
+}
+
+model JobApplication {
+  id           String   @id @default(uuid())
+  fullName     String
+  email        String
+  position     String
+  resumeUrl    String?
+  portfolioUrl String?
+  coverLetter  String?
+  createdAt    DateTime @default(now())
+}
+
+model PromptTemplate {
+  id               String   @id @default(uuid())
+  title            String
+  category         String   // e.g. "Marketing", "Coding", "Data Science"
+  promptText       String
+  model            String   // e.g. "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "GPT-4o"
+  performanceScore Float    @default(0.0) // Average rating or execution speed indicator
+  createdAt        DateTime @default(now())
+}
