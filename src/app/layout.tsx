@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     title: "TEKSPHIRE | Cloud, AI & Digital Innovation",
     description: "Enterprise AWS Cloud Solutions & AI Implementation Platform",
   },
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
